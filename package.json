@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/fac-14/CJKO-autocomplete/issues"
   },
-  "homepage": "https://github.com/fac-14/CJKO-autocomplete#readme"
+  "homepage": "https://github.com/fac-14/CJKO-autocomplete#readme",
+  "devDependencies": {
+    "tape": "^4.9.1"
+  }
 }
