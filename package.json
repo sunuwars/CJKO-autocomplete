@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/fac-14/CJKO-autocomplete#readme",
   "devDependencies": {
+    "nodemon": "^1.18.3",
     "tape": "^4.9.1"
   }
 }
