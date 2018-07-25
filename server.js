@@ -1,16 +1,12 @@
 const http = require('http')
+
+const router = require('./router')
+
 const port = 3000
 
-const message = 'All working so far :D';
+const server = http.createServer(router)
 
-function mainHandler (request, response) {
-  response.writeHead(200, {'Content-Type': 'text/html'});
-  response.write(message);
-  response.end();
-}
+server.listen(port)
 
-const server = http.createServer(mainHandler)
+console.log(`server is listening on ${port}`)
 
-server.listen(port, () => {
-  console.log(`server is listening on ${port}`)
-})
