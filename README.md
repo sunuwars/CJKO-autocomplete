@@ -1,7 +1,5 @@
 ### CJKO-autocomplete
 
-![](https://media.giphy.com/media/LbwJp26pqGf0k/giphy.gif)
-
 # Welcome to Dino Hunt
 ### Creators: 
 - Brymon-saur
@@ -19,9 +17,10 @@ Open this link (...) in your browser and look for your favourite dino, don't wor
 - type localhost3000 in your browser
 - have fun typing
 
+![](https://media.giphy.com/media/3rgXBvnbXtxwaWmhr2/giphy.gif)
+
 ## Streach goals:
 - make the submit button actually return something
 - get the dino picture and its description
 - style the input field and button, style everything really
 - implement any of the design challenges 
-- make a fancy 404 when no dinosaurs found
