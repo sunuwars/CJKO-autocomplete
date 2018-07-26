@@ -64,6 +64,8 @@ function dinoHandler(request, response, url) {
     }
   }
   console.log(suggestionResult);
+  //response.writeHead(200, { "Content-Type": "application/json" });
+  response.end(JSON.stringify(suggestionResult));
 }
 
 // console.log(path.join(__dirname, '/public/', url));
