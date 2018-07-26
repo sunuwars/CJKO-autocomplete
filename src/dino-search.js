@@ -2,26 +2,31 @@ const json = require("./obj.json");
 
 const filterDinos = url => {
     var search = url.split("=")[1];
-    var searchLen = search.length;
+    if (search.length === 0) {
+        return ["Type something!"];
+    }
     //console.log(json);
     //console.log(search);
     var suggestionArr = [];
     var suggestionResult = [];
-    //26 = letters of alphabets which are keys in the json object of dinosaur names
     var keys = Object.keys(json);
     //console.log(keys);
+    // search json for object of dinos based on 1st letter
     for (var i = 0; i <= keys.length; i++) {
         if (search[0] === keys[i]) {
-            //console.log(keys[i] + "yey");
-            //console.log(json[keys[i]]);
             suggestionArr = json[keys[i]];
+            // console.log(suggestionArr);
             for (var j = 0; j < suggestionArr.length; j++) {
-                suggestionResult.push(suggestionArr[j].name);
+                var letterSlice = suggestionArr[j].name.slice(1, search.length);
+                console.log(letterSlice);
+                if (letterSlice === search.slice(1, search.length)) {
+                    suggestionResult.push(suggestionArr[j].name);
+                }
             }
         }
     }
-    console.log(suggestionResult);
-    return suggestionResult;
+    // console.log(suggestionResult[4]);
+    return suggestionResult.slice(0, 10);
 };
 
 module.exports = filterDinos;
