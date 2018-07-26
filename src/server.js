@@ -1,12 +1,11 @@
-const http = require('http')
+const http = require("http");
 
-const router = require('./router')
+const router = require("./router");
 
-const port = 3000
+const port = process.env.PORT || 3000;
 
-const server = http.createServer(router)
+const server = http.createServer(router);
 
-server.listen(port)
+server.listen(port);
 
-console.log(`server is listening on ${port}`)
-
+console.log(`server is listening on ${port}`);
