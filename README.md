@@ -24,3 +24,4 @@ Open this link (...) in your browser and look for your favourite dino, don't wor
 - get the dino picture and its description
 - style the input field and button, style everything really
 - implement any of the design challenges 
+- make a fancy 404 when no dinosaurs found
