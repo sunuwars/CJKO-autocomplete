@@ -23,7 +23,7 @@ function populate(data){
     clearList();
     var list = document.createElement("ul");
     listContainer.appendChild(list);
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < data.length; i++) {
         var listItem = document.createElement("li");
         list.appendChild(listItem);
         var listItemContent = document.createTextNode(data[i]);
