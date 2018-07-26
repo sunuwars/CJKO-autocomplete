@@ -1,33 +1,39 @@
 * {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
-  }
+    text-align: center;
+}
 
-input[type="text"]{
+h1 {
+    font-family: "Merienda", monospace;
+    font-weight: 700;
+}
+
+input[type="text"] {
     border-radius: 1rem;
-    width: 8rem;
+    width: 10rem;
     height: 2rem;
-    border: 2px solid green;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    border: 2px solid rgb(46, 78, 104);
+    padding: 0.5rem;
     font-size: 1rem;
-  }
-  
-input[type="submit"]{
-    width: 4rem;
-    height: 2rem;
+    margin: 1rem;
+}
+
+input[type="submit"] {
     border-radius: 1rem;
-    border: 2px solid green;
+    border: 2px solid rgb(46, 78, 104);
     background-color: white;
     font-size: 1rem;
-  }
+    padding: 0.5rem;
+}
 
-.visually-hidden { 
+.visually-hidden {
     /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
     position: absolute;
-    height: 1px; width: 1px; 
+    height: 1px;
+    width: 1px;
     overflow: hidden;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
-  }
+}
