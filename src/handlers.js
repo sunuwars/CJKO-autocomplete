@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const json = require('./obj.json')
 
 function mainHandler (request, response) {
     fs.readFile(path.join(__dirname, '..', 'public','index.html'), function(error, file) {
@@ -15,8 +16,8 @@ function mainHandler (request, response) {
 }
 
 function handlerPublic (request, response, url) {
-    const loc = path.join(__dirname, '..', url);
-    console.log({loc});
+    // const loc = path.join(__dirname, '..', url);
+    // console.log({loc});
   const extension = url.split('.')[1];
   const extensionType = {
     "html": "text/html",
@@ -25,8 +26,8 @@ function handlerPublic (request, response, url) {
   }
 
   fs.readFile(path.join(__dirname, '..',  url), function(error, file) {
-    const loc = path.join(__dirname, '..',  url);
-    console.log({loc});
+    // const loc = path.join(__dirname, '..',  url);
+    // console.log({loc});
     if (error) {
       console.log(error);
       response.writeHead(500, 'Content-Type: text/html');
@@ -38,9 +39,14 @@ function handlerPublic (request, response, url) {
   })
 }
 
+function dinoHandler(request, response, url) {
+console.log(url);
+}
+
 // console.log(path.join(__dirname, '/public/', url));
 
 module.exports = {
     mainHandler,
-    handlerPublic
+    handlerPublic,
+    dinoHandler
 }
