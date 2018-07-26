@@ -1,22 +1,24 @@
 var input = document.getElementById("input");
 
-function jsonCall(userInput, callback) {
+function requestData(url, cb) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status == 200) {
-            var data = JSON.parse(xhr.responseText);
+            data = JSON.parse(xhr.responseText);
             console.log(data);
-            return callback(data);
+            cb(data);
+            return data;
         }
     };
-    xhr.open("GET", "/autocomplete/?search=" + userInput, true);
-    //console.log("/autocomplete/?search=" + userInput)
+    xhr.open("GET", url, true);
     xhr.send();
 }
 
-input.addEventListener("input", function() {
+input.addEventListener("keyup", function() {
     var userInput = document.getElementById("input").value;
-    jsonCall(userInput, function(data) {
-        console.log(data);
-    });
+    requestData("/autocomplete/?search=" + userInput, logger);
 });
+
+function logger(data) {
+    console.log("working", data);
+}
