@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 function mainHandler (request, response) {
-    fs.readFile(path.join(__dirname, 'public','index.html'), function(error, file) {
+    fs.readFile(path.join(__dirname, '..', 'public','index.html'), function(error, file) {
       if (error) {
         console.log(error);
         response.writeHead(500, 'Content-Type: text/html');
@@ -15,7 +15,7 @@ function mainHandler (request, response) {
 }
 
 function handlerPublic (request, response, url) {
-    const loc = path.join(__dirname, url);
+    const loc = path.join(__dirname, '..', url);
     console.log({loc});
   const extension = url.split('.')[1];
   const extensionType = {
@@ -24,8 +24,8 @@ function handlerPublic (request, response, url) {
     "js": "application/javascript"
   }
 
-  fs.readFile(path.join(__dirname,  url), function(error, file) {
-    const loc = path.join(__dirname, url);
+  fs.readFile(path.join(__dirname, '..',  url), function(error, file) {
+    const loc = path.join(__dirname, '..',  url);
     console.log({loc});
     if (error) {
       console.log(error);
