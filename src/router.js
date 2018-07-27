@@ -1,11 +1,11 @@
-const { mainHandler, handlerPublic, dinoHandler } = require("./handlers.js");
+const { mainHandler, publicHandler, dinoHandler } = require("./handlers.js");
 
 const router = (request, response) => {
   const url = request.url;
   if (url === "/") {
     mainHandler(request, response);
   } else if (url.indexOf("/public/") !== -1) {
-    handlerPublic(request, response, url);
+    publicHandler(request, response, url);
   } else if (url.indexOf("?search=") !== -1) {
     dinoHandler(request, response, url);
   } else {
