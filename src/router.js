@@ -1,4 +1,4 @@
-const { mainHandler, handlerPublic, dinoHandler } = require("./handlers.js");
+const { mainHandler, publicHandler, dinoHandler } = require("./handlers.js");
 
 const router = (request, response) => {
     const url = request.url;
