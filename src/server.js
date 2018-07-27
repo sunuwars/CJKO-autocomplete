@@ -8,4 +8,4 @@ const server = http.createServer(router);
 
 server.listen(port);
 
-console.log(`server is listening on ${port}`);
+console.log(`server is listening on http://localhost:${port}`);
