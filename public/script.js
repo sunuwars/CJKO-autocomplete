@@ -1,4 +1,4 @@
-var input = document.getElementById("input");
+var input = document.getElementById("dino-input");
 var listContainer = document.getElementById("list-container");
 
 function requestData(url, cb) {
@@ -15,7 +15,7 @@ function requestData(url, cb) {
 }
 
 input.addEventListener("keyup", function() {
-    var userInput = document.getElementById("input").value;
+    var userInput = document.getElementById("dino-input").value;
     requestData("/autocomplete/?search=" + userInput, populate)
 });
 
