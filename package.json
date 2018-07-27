@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "stat": "node src/ server.js"
     "test": "tape",
     "nodemon": "nodemon src/server.js"
   },
