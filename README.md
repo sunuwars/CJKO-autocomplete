@@ -1,5 +1,7 @@
 ### CJKO-autocomplete
 
+![](https://media.giphy.com/media/LbwJp26pqGf0k/giphy.gif)
+
 # Welcome to Dino Hunt
 ### Creators: 
 - Brymon-saur
@@ -14,7 +16,7 @@ Open this link (...) in your browser and look for your favourite dino, don't wor
 - clone this repo
 - npm install
 - set up your local server: npm run nodemon
-- type localhost3000 in your browser
+- type localhost:3000 in your browser
 - have fun typing
 
 ![](https://media.giphy.com/media/3rgXBvnbXtxwaWmhr2/giphy.gif)
