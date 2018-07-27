@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Dinos</title>
     <link rel="stylesheet" type="text/css" href="/../public/style.css">
@@ -13,6 +12,7 @@
     and although html and css are in the same folder
     the server doesnt get that! ?????? -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/../public/favicon.ico" type="image/x-icon"/>
 </head>
 
 <body>
@@ -20,15 +20,7 @@
     <form>
         <div id="inputs">
         <label for="dino-input" class="visually-hidden">Search for dinos here</label>
-
-        <!-- <input type="text" name="name" id="input" list="dino_list" autocomplete="off"> -->
-
-        <input type="text" name="name"  id="dino-input" list="dino_list" autocomplete="off" >
-        <br/>
-        <container id="list-container">
-
-        </container>
-
+        <input type="text" name="name"  id="dino-input" list="dino_list" autocomplete="off" placeholder="Dino name">
         <label for="submit-input" class="visually-hidden">Search</label>
         <input type="submit" value="Run">
         </div>
