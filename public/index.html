@@ -18,14 +18,15 @@
 <body>
     <h1>We're Going on a Dino Hunt!</h1>
     <form>
+        <div id="inputs">
         <label for="dino-input" class="visually-hidden">Search for dinos here</label>
-        <input type="text" name="name" id="input" list="dino_list">
-        <br/>
-        <container id="list-container">
-
-        </container>
+        <input type="text" name="name" id="input" list="dino_list" autocomplete="off">
         <label for="submit-input" class="visually-hidden">Search</label>
-        <input type="submit">
+        <input type="submit" value="Run">
+        </div>
+        <div id="list-container">
+
+        </div>
     </form>
 </body>
 <script type="text/javascript" src="/../public/script.js"></script>
