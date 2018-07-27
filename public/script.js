@@ -32,7 +32,7 @@ function populate(data) {
         listItem.appendChild(listItemContent);
         listItem.addEventListener("click", function(e) {
             input.value = e.target.textContent;
-        })
+        });
     }
 }
 // add function that adds classes to list so we can style them :)
@@ -52,7 +52,7 @@ function returnDinoGif(e) {
     }
     var gifItem = document.createElement("img");
     var dinoInfo = document.createElement("h2");
-    dinoInfo.textContent = input.value;
+    dinoInfo.textContent = "You tracked down the " + input.value;
     gifItem.src = "https://media.giphy.com/media/LbwJp26pqGf0k/giphy.gif";
     gifContainer.appendChild(dinoInfo);
     gifContainer.appendChild(gifItem);
