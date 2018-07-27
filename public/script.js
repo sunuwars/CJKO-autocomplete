@@ -28,6 +28,9 @@ function populate(data){
         list.appendChild(listItem);
         var listItemContent = document.createTextNode(data[i]);
         listItem.appendChild(listItemContent);
+        listItem.addEventListener("click", function(e) {
+            input.value = e.target.textContent;
+        })
     }
 }
 // add function that adds classes to list so we can style them :)
