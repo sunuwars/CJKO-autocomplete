@@ -1,14 +1,16 @@
 var input = document.getElementById("dino-input");
 var listContainer = document.getElementById("list-container");
+var gifContainer = document.querySelector(".dino-gif");
+var searchBtn = document.querySelector("#search-btn");
 
 function requestData(url, cb) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status == 200) {
-        data = JSON.parse(xhr.responseText);
-        cb(data)
-        return data;
-      }
+        if (xhr.readyState === 4 && xhr.status == 200) {
+            data = JSON.parse(xhr.responseText);
+            cb(data);
+            return data;
+        }
     };
     xhr.open("GET", url, true);
     xhr.send();
@@ -16,10 +18,10 @@ function requestData(url, cb) {
 
 input.addEventListener("keyup", function() {
     var userInput = document.getElementById("dino-input").value;
-    requestData("/autocomplete/?search=" + userInput, populate)
+    requestData("/autocomplete/?search=" + userInput, populate);
 });
 
-function populate(data){
+function populate(data) {
     clearList();
     var list = document.createElement("ul");
     listContainer.appendChild(list);
@@ -32,7 +34,23 @@ function populate(data){
 }
 // add function that adds classes to list so we can style them :)
 function clearList() {
-    while(listContainer.firstChild) {
+    while (listContainer.firstChild) {
         listContainer.removeChild(listContainer.firstChild);
     }
+}
+
+searchBtn.addEventListener("click", returnDinoGif);
+
+function returnDinoGif(e) {
+    e.preventDefault();
+    clearList();
+    while (gifContainer.firstChild) {
+        gifContainer.removeChild(gifContainer.firstChild);
+    }
+    var gifItem = document.createElement("img");
+    var dinoInfo = document.createElement("h2");
+    dinoInfo.textContent = input.value;
+    gifItem.src = "https://media.giphy.com/media/LbwJp26pqGf0k/giphy.gif";
+    gifContainer.appendChild(dinoInfo);
+    gifContainer.appendChild(gifItem);
 }
