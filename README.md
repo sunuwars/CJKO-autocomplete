@@ -1,5 +1,7 @@
 ### CJKO-autocomplete
 
+![](https://media.giphy.com/media/LbwJp26pqGf0k/giphy.gif)
+
 # Welcome to Dino Hunt
 ### Creators: 
 - Brymon-saur
