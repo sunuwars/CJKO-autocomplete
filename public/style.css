@@ -15,15 +15,18 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 2vw;
+    margin: 0 auto;
 }
 
 h1 {
     font-family: "Merienda", monospace;
+    font-size: 3rem;
     font-weight: 700;
     padding: 0px 24px;
     margin-bottom: 48px;
 }
+
+/* --------------FORM-STYLING-------------- */
 
 form {
     display: flex;
@@ -47,7 +50,7 @@ input[type="text"] {
     background: #f4f1ec;
 }
 
-input[type="submit"] {
+#search-btn {
     border-radius: 1rem;
     border: 2px solid rgb(46, 78, 104);
     background-color: #f4f1ec;
@@ -56,6 +59,8 @@ input[type="submit"] {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+/* --------------AUTOCOMPLETE-STYLING-------------- */
 
 #list-container {
     display: flex;
@@ -84,6 +89,29 @@ li {
     font-size: 1rem;
     list-style-type: none;
     width: inherit;
+}
+
+/* --------------GIF-DIV-STYLING-------------- */
+
+h2 {
+    font-family: "Merienda", monospace;
+    color: #307473;
+}
+
+.dino-gif {
+    background-color: rgba(224, 216, 222, 0.459);
+    height: auto;
+    width: 90vw;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px 10px rgba(194, 197, 169, 1);
+}
+
+.dino-gif > img {
+    height: auto;
+    width: 90%;
+    margin-bottom: 2.5rem;
+    border-radius: 1rem;
 }
 
 .visually-hidden {

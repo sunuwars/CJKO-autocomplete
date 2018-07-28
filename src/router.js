@@ -10,7 +10,7 @@ const router = (request, response) => {
         dinoHandler(request, response, url);
     } else if (url.indexOf("?name=") !== -1) {
         // relocate to home page on submit
-        response.writeHead(301, { Location: "/" });
+        response.writeHead(307, { Location: "/" });
         response.end();
     } else {
         response.writeHead(404, "Content-Type: text/html");

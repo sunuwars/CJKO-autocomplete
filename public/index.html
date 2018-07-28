@@ -8,22 +8,23 @@
     <link href="https://fonts.googleapis.com/css?family=Merienda:400,700" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/../public/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/../public/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
     <h1>We're Going on a Dino Hunt!</h1>
     <form>
         <div id="inputs">
-        <label for="dino-input" class="visually-hidden">Search for dinos here</label>
-        <input type="text" name="name"  id="dino-input" list="dino_list" autocomplete="off" placeholder="Dino name">
-        <label for="submit-input" class="visually-hidden">Search</label>
-        <input type="submit" value="Run">
+            <label for="dino-input" class="visually-hidden">Search for dinos here</label>
+            <input type="text" name="name" id="dino-input" list="dino_list" autocomplete="off" placeholder="Dino name">
+            <label for="submit-input" class="visually-hidden">Search</label>
+            <button id="search-btn">Run</button>
         </div>
         <div id="list-container">
 
         </div>
     </form>
+    <div class="dino-gif"></div>
 </body>
 <script type="text/javascript" src="/../public/script.js"></script>
 
